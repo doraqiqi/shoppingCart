@@ -25,7 +25,6 @@ while True:
         product_list.append(tuple(add))
         f_product = open("product","a",encoding="utf-8")
         f_product.write(input_product+" "+input_price+"\n")
-        f_product.close()
         print("已成功添加")
     elif choice =="2":
         input_del = input("请输入要删除的商品编号")
@@ -40,7 +39,6 @@ while True:
         list_new2 = open("product", "w", encoding="utf-8")
         for line in product_list:
             list_new2.write(line[0] + " " + line[1] + "\n")
-		list_new2.close()
         exit()
     else:
         print("请输入正确选项！")
